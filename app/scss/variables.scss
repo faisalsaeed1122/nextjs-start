@@ -1,0 +1,56 @@
+// colors
+$brand-color: #d90429; // red brand color
+$brand-second-color: #2b2d42; // dark brand color
+$brand-third-color: #edf2f4; // brand grey color
+
+$black-color: #000; // black color
+$white-color: #fff; // white color
+$light-grey-color: #918f8f; // light grey
+
+// fonts en
+$font-primary-en:'Rajdhani', sans-serif;
+
+
+@mixin orange-gradient {
+  background: -webkit-linear-gradient(to top, #f83600, #fe8c00);
+  background: linear-gradient(to top, #f83600, #fe8c00);
+}
+
+
+@mixin image-border {
+  position: relative;
+  &:before {
+    position: absolute;
+    content: "";
+    border: 1px solid #e4eaec;
+    height: 100%;
+    right: -15px;
+    top: 15px;
+    width: 100%;
+    z-index: -1;
+    @include transition(all 0.5s ease);
+  }
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+//Padding mixin
+@mixin padding($top, $right, $bottom, $left) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+//Margin mixin
+@mixin margin($top, $right, $bottom, $left) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}
