@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import clsx from "clsx";
+// import { usePathname } from "next/navigation";
+// import clsx from "clsx";
 import { useState, useEffect } from "react";
 import styles from "../scss/header.module.scss";
 

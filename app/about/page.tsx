@@ -1,7 +1,7 @@
-import Image from "next/image";
-import clsx from "clsx";
+// import Image from "next/image";
+// import clsx from "clsx";
 
-import Link from "next/link";
+// import Link from "next/link";
 import Header from "../components/header";
 import MySwiper from "../components/MySwiper";
 

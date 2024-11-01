@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./scss/home.module.scss";
-import clsx from "clsx";
-import Link from "next/link";
+// import clsx from "clsx";
+// import Link from "next/link";
 import Header from "./components/header";
 import Button from "./components/button";
 
