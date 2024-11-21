@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
 // import localFont from "next/font/local";
-import { inter } from "@/app/ui/fonts";
+import { Rajdhani } from "next/font/google";
 
+import { inter } from "@/app/ui/fonts";
+import "bootstrap-icons/font/bootstrap-icons.css";
+
+import "../public/assets/scss/custom-bootstrap.scss";
 import "./globals.scss";
+
+const rajdhani = Rajdhani({
+  subsets: ["latin"], // Specify the subsets you need
+  weight: ["400", "500", "700"], // Add specific weights
+});
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -32,7 +41,7 @@ export default function RootLayout({
       >
         {children}
       </body> */}
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${rajdhani.className} antialiased`}>{children}</body>
     </html>
   );
 }

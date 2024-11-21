@@ -2,15 +2,20 @@
 // import styles from "@/app/ui/home.module.css";
 // import clsx from "clsx";
 // import Link from "next/link";
-import Header from "../components/header";
-
+import Header from "../../components/header";
+import ContactForm from "../../components/ContactForm";
+import Footer from "../../components/footer";
 export default function Page() {
   return (
-    <div className="">
-      <main className="">
+    <div>
+      <div className="container">
         <Header />
-        Contact page
-      </main>
+        <h1 className="heading__lg">Contact Us</h1>
+        <section className="contact__wrapper">
+          <ContactForm />
+        </section>
+      </div>
+      <Footer />
     </div>
   );
 }
