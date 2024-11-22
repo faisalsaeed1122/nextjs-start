@@ -1,10 +1,5 @@
 import Head from "next/head";
 
-interface SEOProps {
-  title: string;
-  description: string;
-}
-
 export default function SEO() {
   return (
     <Head>

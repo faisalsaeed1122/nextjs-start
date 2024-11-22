@@ -10,6 +10,7 @@ import Footer from "../../components/footer";
 import GetStarted from "../../components/GetStarted";
 import { useEffect, useState } from "react";
 import CountUp from "react-countup";
+import Container from "react-bootstrap/Container";
 
 export default function Page() {
   const [startCounter, setStartCounter] = useState(false);
@@ -21,7 +22,7 @@ export default function Page() {
 
   return (
     <div>
-      <div className="container">
+      <Container>
         <Header />
 
         <section className={styles.about}>
@@ -91,7 +92,7 @@ export default function Page() {
             </div>
           </div>
         </section>
-      </div>
+      </Container>
       <GetStarted />
       <Footer />
     </div>

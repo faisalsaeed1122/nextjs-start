@@ -6,11 +6,12 @@ import OurSpecialization from "../../components/OurSpecialization";
 import Footer from "../../components/footer";
 import Accordion from "react-bootstrap/Accordion";
 import GetStarted from "../../components/GetStarted";
+import Container from "react-bootstrap/Container";
 
 export default function Page() {
   return (
     <div>
-      <div className="container">
+      <Container>
         <Header />
         <h2 className="heading__lg">FAQS</h2>
         <section className={styles.faqs}>
@@ -151,7 +152,7 @@ export default function Page() {
             </Accordion.Item>
           </Accordion>
         </section>
-      </div>
+      </Container>
 
       <section className="Specialize__Trades">
         <h2>we SPECIALIZE in all construction TRADES</h2>

@@ -6,13 +6,14 @@ import OurSpecialization from "../../components/OurSpecialization";
 import Button from "../../components/button";
 import Footer from "../../components/footer";
 import GetStarted from "../../components/GetStarted";
-// import SEO from "../../components/SEO";
+import SEO from "../../components/SEO";
+import Container from "react-bootstrap/Container";
 import servicesData from "./services.json"; // Import JSON
 
 export default function Page() {
   return (
     <div>
-      <div className="container">
+      <Container>
         <Header />
 
         <h1 className="heading__lg">Our Services</h1>
@@ -38,7 +39,7 @@ export default function Page() {
             </div>
           ))}
         </section>
-      </div>
+      </Container>
 
       <section className="Specialize__Trades">
         <h2>we SPECIALIZE in all construction TRADES</h2>

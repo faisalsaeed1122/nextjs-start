@@ -31,6 +31,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 2rem;
+
+    @media (max-width: 767.98px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
     div {
       background: $white-color;
       padding: 35px;

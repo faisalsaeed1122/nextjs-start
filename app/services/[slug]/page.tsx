@@ -7,6 +7,7 @@ import GetStarted from "../../../components/GetStarted";
 import servicesData from "../services.json"; // Import JSON
 import Link from "next/link";
 import Button from "../../../components/button";
+import Container from "react-bootstrap/Container";
 
 export function generateStaticParams() {
   return servicesData.map((service) => ({
@@ -27,7 +28,7 @@ export default function ServiceDetail({
 
   return (
     <div>
-      <div className="container">
+      <Container>
         <Header />
 
         <section className="serviceDetail__wrapper">
@@ -53,7 +54,7 @@ export default function ServiceDetail({
 
           <p>{service.details}</p>
         </section>
-      </div>
+      </Container>
       <section className="Specialize__Trades">
         <h2>we SPECIALIZE in all construction TRADES</h2>
         <OurSpecialization />

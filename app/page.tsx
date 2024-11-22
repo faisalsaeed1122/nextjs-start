@@ -11,18 +11,20 @@ import OurSpecialization from "../components/OurSpecialization";
 import WelcomeText from "../components/WelcomeText";
 import Footer from "../components/footer";
 import GetStarted from "../components/GetStarted";
+import Container from "react-bootstrap/Container";
+
 export default function Home() {
   return (
-    <main className="">
+    <main>
       <div className="Hero__Wrapper">
-        <div className="container">
+        <Container>
           <Header />
           <HeroSwiper />
-        </div>
+        </Container>
       </div>
 
       <section className="welcome__wrap">
-        <div className="container">
+        <Container>
           <p>
             A1 Estimation provides Construction Cost Estimating , Quantity
             Takeoffs and Cost Analysis & Management services for Owners, General
@@ -30,13 +32,11 @@ export default function Home() {
             Developers, Designers, Material Suppliers, Cost Segregation firms
             and Real estate industry.
           </p>
-
           <WelcomeText />
-
           <Link href="/about">
             <Button variant="primary">More About Us</Button>
           </Link>
-        </div>
+        </Container>
       </section>
 
       <section className="Specialize__Trades">
@@ -45,10 +45,10 @@ export default function Home() {
       </section>
 
       <section className="Testimonials">
-        <div className="container">
+        <Container>
           <h2 className="heading__with__line">What Our Client Says</h2>
           <TestimonialSwiper />
-        </div>
+        </Container>
       </section>
 
       <div className={styles.shape} />
