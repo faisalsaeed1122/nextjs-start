@@ -10,19 +10,22 @@ import Container from "react-bootstrap/Container";
 // Define the props that include params with slug
 type ServiceDetailProps = {
   params: {
-    slug: string;
+    slug: string; // Matches the dynamic route parameter
   };
 };
 
 // Generate static params, returning a list of slugs
-export function generateStaticParams() {
+export function generateStaticParams(): { slug: string }[] {
   return servicesData.map((service) => ({
     slug: service.slug,
   }));
 }
 
 export default function ServiceDetail({ params }: ServiceDetailProps) {
-  // Find the service based on the slug passed in the URL
+  if (!params?.slug) {
+    return <h1>Invalid Service</h1>;
+  }
+
   const service = servicesData.find((service) => service.slug === params.slug);
 
   if (!service) {
@@ -38,7 +41,11 @@ export default function ServiceDetail({ params }: ServiceDetailProps) {
           <div className="mainHeading__wrap">
             <figure className="image__holder">
               <Image
-                src={service.image}
+                src={
+                  service.image.startsWith("/")
+                    ? service.image
+                    : `/${service.image}`
+                }
                 alt={service.title}
                 width={1000}
                 height={38}
@@ -46,7 +53,7 @@ export default function ServiceDetail({ params }: ServiceDetailProps) {
             </figure>
             <div className="text">
               <Link href="/services">
-                <button type="button" className="">
+                <button type="button">
                   <i className="bi bi-arrow-left-short"></i>
                 </button>
               </Link>
