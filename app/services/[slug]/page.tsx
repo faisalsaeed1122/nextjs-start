@@ -3,7 +3,7 @@ import Header from "../../../components/header";
 import OurSpecialization from "../../../components/OurSpecialization";
 import Footer from "../../../components/footer";
 import GetStarted from "../../../components/GetStarted";
-import servicesData from "../services.json"; // Importing mock data
+import servicesData from "../../../public/assets/data/services.json"; // Importing mock data
 import Link from "next/link";
 import Container from "react-bootstrap/Container";
 

@@ -8,7 +8,7 @@ import Footer from "../../components/footer";
 import GetStarted from "../../components/GetStarted";
 // import SEO from "../../components/SEO";
 import Container from "react-bootstrap/Container";
-import servicesData from "./services.json"; // Import JSON
+import servicesData from "../../public/assets/data/services.json"; // Import JSON
 
 export default function Page() {
   return (
