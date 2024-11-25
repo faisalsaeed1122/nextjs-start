@@ -6,7 +6,7 @@ import OurSpecialization from "../../components/OurSpecialization";
 import Button from "../../components/button";
 import Footer from "../../components/footer";
 import GetStarted from "../../components/GetStarted";
-import SEO from "../../components/SEO";
+// import SEO from "../../components/SEO";
 import Container from "react-bootstrap/Container";
 import servicesData from "./services.json"; // Import JSON
 
@@ -27,7 +27,7 @@ export default function Page() {
                   <p>{service.description}</p>
                   <Button variant="secondary">Read more</Button>
                 </div>
-                <figure className="image__holder">
+                <figure className="image__holder ratio  ratio-16x9">
                   <Image
                     src={service.image}
                     alt={service.title}

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "../public/assets/scss/home.module.scss";
 
 // import clsx from "clsx";

@@ -4,39 +4,61 @@ import Link from "next/link";
 // import { usePathname } from "next/navigation";
 // import clsx from "clsx";
 import Image from "next/image";
-import { useState, useEffect } from "react";
-
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import { useState } from "react";
 import styles from "../public/assets/scss//header.module.scss";
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <Navbar className={styles.navbar}>
-      <Container>
-        <Navbar.Brand href="/">
+    <nav className={styles.navbar}>
+      <div className={styles.menuContainer}>
+        <h1 className={styles.logo}>
           <Image
-            className="dark:invert"
             src="../assets/images/logo.webp"
             alt="Next.js logo"
             width={148}
             height={74}
             priority
           />
-        </Navbar.Brand>
-        <Navbar.Toggle />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav>
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/about">About</Nav.Link>
-            <Nav.Link href="/services">services</Nav.Link>
-            <Nav.Link href="/faqs">faqs</Nav.Link>
-            <Nav.Link href="/contact">Contact</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+        </h1>
+
+        {/* Desktop Links */}
+        <div className={`${styles.navLinks} ${isOpen ? styles.show : ""}`}>
+          <Link href="/" className={styles.navItem}>
+            Home
+          </Link>
+          <Link href="/about" className={styles.navItem}>
+            About
+          </Link>
+          <Link href="/services" className={styles.navItem}>
+            services
+          </Link>
+          <Link href="/faqs" className={styles.navItem}>
+            faqs
+          </Link>
+          <Link href="/contact" className={styles.navItem}>
+            Contact
+          </Link>
+        </div>
+
+        {/* Toggle Button */}
+        <button className={styles.hamburger} onClick={toggleMenu}>
+          {!isOpen ? (
+            <span className={styles.hamburgerIcon}>
+              <i class="bi bi-list"></i>
+            </span>
+          ) : (
+            <span className={styles.closeIcon}>
+              <i class="bi bi-x"></i>
+            </span>
+          )}
+        </button>
+      </div>
+    </nav>
   );
 }

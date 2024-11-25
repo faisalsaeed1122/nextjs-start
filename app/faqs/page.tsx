@@ -114,9 +114,9 @@ export default function Page() {
               <Accordion.Body>
                 <p>
                   {" "}
-                  We usually take payments through 1) PayPal "it secure our
-                  clients" 2) Bank OTC or Wire (Bank of America 3) All debit &
-                  credit cards Whichever is easy for you.
+                  We usually take payments through: 1 PayPal &quot;it secure our
+                  clients&quot; 2 Bank OTC or Wire (Bank of America 3) All debit
+                  & credit cards Whichever is easy for you.
                 </p>
               </Accordion.Body>
             </Accordion.Item>

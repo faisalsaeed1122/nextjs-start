@@ -32,8 +32,8 @@ export default function Contact() {
       } else {
         setStatus("Failed to send message.");
       }
-    } catch (error) {
-      setStatus("Error sending message.");
+    } catch {
+      // setStatus("Error sending message.");
     }
   };
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 // import localFont from "next/font/local";
 import { Rajdhani } from "next/font/google";
 
-import { inter } from "@/app/ui/fonts";
+// import { inter } from "@/app/ui/fonts";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 import "../public/assets/scss/custom-bootstrap.scss";

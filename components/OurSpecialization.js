@@ -3,7 +3,7 @@
 // import Link from "next/link";
 // import { usePathname } from "next/navigation";
 // import clsx from "clsx";
-import Image from "next/image";
+// import Image from "next/image";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -49,7 +49,6 @@ export default function OurSpecialization() {
         spaceBetween={30} // Space between slides
         slidesPerView={1} // Number of slides visible at a time
         navigation={false} // Enable navigation
-        pagination={{ clickable: true }} // Enable pagination
         autoplay={false} // Enable autoplay
         // slidesOffsetBefore={50} // Add 50px margin on the left
         // slidesOffsetAfter={50} // Add 50px margin on the right
@@ -83,7 +82,6 @@ export default function OurSpecialization() {
             spaceBetween: 20,
           },
         }}
-        modules={[Pagination]}
         className=""
       >
         {data.map((item) => (
